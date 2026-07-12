@@ -1,0 +1,6 @@
+from datasets import load_dataset
+
+dataset = load_dataset("json", data_files="data/train.jsonl")
+
+print(dataset)
+print(dataset["train"][4])
