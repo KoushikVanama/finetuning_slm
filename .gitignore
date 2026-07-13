@@ -1,5 +1,6 @@
 .venv/
 /.venv/
+outputs/
 *.pyc
 *.pyo
 *.pyd

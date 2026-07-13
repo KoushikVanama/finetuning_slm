@@ -4,6 +4,7 @@ from config import MODEL_NAME, MAX_LENGTH, OUTPUT_DIR, DATASET
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForCausalLM.from_pretrained(MODEL_NAME)
+print(model)
 
 total = sum(p.numel() for p in model.parameters())
 print(f"Total number of parameters: {total}")
@@ -37,3 +38,4 @@ model = get_peft_model(
 )
 
 print(model.print_trainable_parameters())
+print(model.named_modules(), "named_modules")
